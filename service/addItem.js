@@ -5,16 +5,6 @@ export function addItem() {
     
     const disciplinas = JSON.parse(localStorage.getItem('disciplinas')) || [];
 
-    if(disciplinas.length >= 3) {
-        Swal.fire({
-            icon: "error",
-            title: "Erro!",
-            text: "Limite máximo atingido (3)!",
-        });
-
-        return
-    }
-
     if (!name.value || !des.value || !ch.value) {
         Swal.fire({
             icon: "error",
@@ -23,6 +13,16 @@ export function addItem() {
         });
 
         return;
+    }
+
+    if(disciplinas.length >= 3) {
+        Swal.fire({
+            icon: "error",
+            title: "Erro!",
+            text: "Limite máximo atingido (3)!",
+        });
+
+        return
     }
 
     disciplinas.push(
