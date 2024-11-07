@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    min-height: 100vh;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+}
+
+p {
+    margin-bottom: 0.2em !important
+}
+
+.container-flex {
+    width: 50%;
+}
+
+.inputs {
+    width: 100%;
+}
+
+#des {
+    height: 10em;
+    resize: none;
+}
+
+@media (max-width: 1400px) {
+    .container-flex {
+        width: 60%;
+        margin: 1em;
+    }
+}
+
+@media (max-width: 1200px) {
+    main {
+        padding: 1em;
+    }
+
+    .container-flex {
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: 1em;
+    }
+    .container-flex {
+        width: 100%;
+    }
+}
+
+.disciplina-container:nth-child(1) {
+    margin: 0 !important;
+}
+
+.disciplina-container .disciplina-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.disciplina-container .disciplina-header button {
+    background-color: transparent;
+    border: none;
+}
+
+.disciplina-container .disciplina-header button .bi.bi-trash3-fill {
+    color: black;
+    position: relative;
+    z-index: -1;
+}
+
+.delete-all {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em 0;
+}
+
+.delete-all button {
+    width: 80%;
+}
