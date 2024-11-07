@@ -39,8 +39,6 @@ showItem()
 
 
 document.querySelector('.discplinas').addEventListener('click', (event) => {
-    console.log('teste')
-    console.log(event)
     if (event.target && event.target.classList.contains('deleteItem')) {
 
         const itemId = event.target.getAttribute('data-id');
